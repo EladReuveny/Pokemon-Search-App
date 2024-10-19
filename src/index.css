@@ -1,0 +1,110 @@
+:root {
+  --clr-bg: hsl(240, 98%, 18%);
+
+  --clr-font-primary: hsl(0, 0%, 100%);
+  --clr-font-secondary: hsl(54, 100%, 50%);
+  --clr-accent: hsla(0, 100%, 50%, 0.904);
+  --clr-ph: hsla(0, 0%, 100%, 0.721);
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+html,
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: var(--clr-font-secondary);
+}
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background: var(--clr-bg);
+}
+
+header {
+  margin-top: 20px;
+  text-align: center;
+}
+header .logo {
+  height: 60px;
+  translate: -7px 12px;
+}
+
+.input-form {
+  text-align: center;
+  margin-top: 20px;
+}
+.input-form h3 {
+  color: var(--clr-font-primary);
+  margin-bottom: 10px;
+}
+.input-form__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.input-form__search input {
+  padding: 10px 100px 10px 10px;
+  border-radius: 5px;
+  border: 2px solid var(--clr-font-secondary);
+  background: transparent;
+}
+.input-form__search input:focus {
+  box-shadow: 0 0 20px var(--clr-font-secondary);
+}
+.input-form__search input::placeholder {
+  color: var(--clr-ph);
+}
+.input-form__search button {
+  padding: 5px 25px;
+  border: none;
+  background: var(--clr-ph);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.input-form__search button:hover {
+  box-shadow: 0 0 10px var(--clr-font-primary);
+}
+.input-form__search button img {
+  height: 25px;
+  transition: 0.3s;
+}
+.input-form__search button:hover img {
+  translate: 0 -2px;
+}
+
+.pokemon-info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+#pokemon-id {
+  color: var(--clr-ph);
+  font-size: 1.75rem;
+  font-weight: 900;
+}
+#pokemon-name {
+  color: var(--clr-font-primary);
+  font-size: 2.25rem;
+  margin-top: -5px;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 800;
+}
+#pokemon-sprite {
+  position: relative;
+  height: 400px;
+  top: -100px;
+  left: -100px;
+}
+.pokemon-info__details {
+  margin-top: 30px;
+}
