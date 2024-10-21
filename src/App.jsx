@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import InputForm from "./InputForm";
-import Header from "./Header";
-import PokemonInfo from "./PokemonInfo";
+import InputForm from "./components/InputForm";
+import Header from "./components/Header";
+import PokemonInfo from "./components/PokemonInfo";
 
 const App = () => {
   const [pokemonData, setPokemonData] = useState(null);
