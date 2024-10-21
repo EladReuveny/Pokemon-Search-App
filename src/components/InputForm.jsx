@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import pokemonIcon from "../assets/pokemon-icon.svg";
 
 const InputForm = ({ setPokemon }) => {
   const [searchValue, setSearchValue] = useState("");
@@ -13,7 +14,7 @@ const InputForm = ({ setPokemon }) => {
         return response.json();
       })
       .then((data) => setPokemon(data))
-      .catch((error) => console.error(error));
+      .catch((error) => alert("Error: Invalid input! Try again."));
   };
 
   return (
@@ -28,7 +29,7 @@ const InputForm = ({ setPokemon }) => {
           placeholder="Search for a Pokémon..."
         />
         <button onClick={searchPokemon}>
-          <img src="/src/assets/pokemon-icon.svg" alt="" />
+          <img src={pokemonIcon} alt="Pokemon Icon" />
         </button>
       </div>
     </section>
