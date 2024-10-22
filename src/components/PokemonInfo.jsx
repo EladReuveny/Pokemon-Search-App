@@ -72,6 +72,36 @@ const PokemonInfo = ({ pokemon }) => {
         <p id="pokemon-special-defense">
           <b>Special Defense:</b> {pokemon.stats[4].base_stat}
         </p>
+        <h2 className="pokemon-evolutions__title">
+          <a href="#pokemon-evolutions">Evolutions</a>
+        </h2>
+        <div id="pokemon-evolutions">
+          {pokemon.secondLvl && (
+            <div className="pokemon-evolutions__second-lvl">
+              <p>
+                <b>{pokemon.secondLvl.name}</b>
+              </p>
+              <img
+                src={pokemon.secondLvl.img}
+                alt={`${pokemon.secondLvl.name} image`}
+              />
+            </div>
+          )}
+          {pokemon.thirdLvl && (
+            <>
+            <hr />
+            <div className="pokemon-evoltuions__third-lvl">
+              <p>
+                <b>{pokemon.thirdLvl.name}</b>
+              </p>
+              <img
+                src={pokemon.thirdLvl.img}
+                alt={`${pokemon.thirdLvl.name} image`}
+              />
+            </div>
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
