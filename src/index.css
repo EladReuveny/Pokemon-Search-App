@@ -1,11 +1,4 @@
-:root {
-  --clr-bg: hsl(240, 98%, 18%);
-
-  --clr-font-primary: hsl(0, 0%, 100%);
-  --clr-font-secondary: hsl(54, 100%, 50%);
-  --clr-accent: hsla(0, 100%, 50%, 0.904);
-  --clr-ph: hsla(0, 0%, 100%, 0.721);
-}
+/* CSS Resets */
 *,
 *::before,
 *::after {
@@ -13,6 +6,9 @@
   padding: 0;
   box-sizing: border-box;
   outline: none;
+}
+* {
+  overflow-x: hidden;
 }
 html,
 body {
@@ -28,6 +24,15 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   background: var(--clr-bg);
+}
+
+:root {
+  --clr-bg: hsl(240, 98%, 18%);
+
+  --clr-font-primary: hsl(0, 0%, 100%);
+  --clr-font-secondary: hsl(54, 100%, 50%);
+  --clr-accent: hsla(0, 100%, 50%, 0.904);
+  --clr-ph: hsla(0, 0%, 100%, 0.721);
 }
 
 header {
@@ -171,10 +176,79 @@ header .logo {
   color: var(--clr-bg);
 }
 .pokemon-info__details .pokemon-evolutions__title:hover a,
-.pokemon-info__details #pokemon-evolutions:hover p{
+.pokemon-info__details #pokemon-evolutions:hover p {
   color: var(--clr-bg);
 }
 .pokemon-info__details #pokemon-evolutions {
   margin-top: -15px;
   text-transform: capitalize;
+}
+
+/* Media Queries */
+@media (max-width: 450px) {
+  header {
+    text-align: center;
+  }
+  header .logo {
+    height: 100px;
+    width: 100%;
+  }
+  header h1 {
+    font-size: 2.25rem;
+  }
+
+  .input-form {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .input-form h3 {
+    margin-bottom: 20px;
+  }
+  .input-form__search {
+    flex-direction: column;
+    padding-inline: 20px;
+  }
+  .input-form__search > * {
+    width: 100%;
+  }
+
+  .pokemon-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: 30px;
+  }
+  .pokemon-info__header {
+    width: 100%;
+  }
+  #pokemon-id {
+    font-size: 1.75rem;
+  }
+  #pokemon-name {
+    font-size: 2.25rem;
+  }
+  .pokemon-info__header .pokemon-size {
+    width: 80%;
+  }
+  #pokemon-type {
+    padding: 20px 50px;
+    text-align: center;
+  }
+  #pokemon-sprite {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .pokemon-info hr {
+    opacity: 0.3;
+  }
+  .pokemon-info__details {
+    white-space: nowrap;
+  }
+  .pokemon-info__details > * {
+    padding: 20px 0;
+    min-width: fit-content;
+  }
+  .pokemon-info__details #pokemon-evolutions {
+    justify-content: space-evenly;
+  }
 }

@@ -54,25 +54,7 @@ const PokemonInfo = ({ pokemon }) => {
       </div>
       <hr />
       <div className="pokemon-info__details">
-        <p id="pokemon-hp">
-          <b>HP:</b> {pokemon.stats[0].base_stat}
-        </p>
-        <p id="pokemon-attack">
-          <b>Attack:</b> {pokemon.stats[1].base_stat}
-        </p>
-        <p id="pokemon-defense">
-          <b>Defense:</b> {pokemon.stats[2].base_stat}
-        </p>
-        <p id="pokemon-speed">
-          <b>Speed:</b> {pokemon.stats[5].base_stat}
-        </p>
-        <p id="pokemon-special-attack">
-          <b>Special Attack:</b> {pokemon.stats[3].base_stat}
-        </p>
-        <p id="pokemon-special-defense">
-          <b>Special Defense:</b> {pokemon.stats[4].base_stat}
-        </p>
-        <h2 className="pokemon-evolutions__title">
+      <h2 className="pokemon-evolutions__title">
           <a href="#pokemon-evolutions">Evolutions</a>
         </h2>
         <div id="pokemon-evolutions">
@@ -102,6 +84,25 @@ const PokemonInfo = ({ pokemon }) => {
             </>
           )}
         </div>
+        <p id="pokemon-hp">
+          <b>HP:</b> {pokemon.stats[0].base_stat}
+        </p>
+        <p id="pokemon-attack">
+          <b>Attack:</b> {pokemon.stats[1].base_stat}
+        </p>
+        <p id="pokemon-defense">
+          <b>Defense:</b> {pokemon.stats[2].base_stat}
+        </p>
+        <p id="pokemon-speed">
+          <b>Speed:</b> {pokemon.stats[5].base_stat}
+        </p>
+        <p id="pokemon-special-attack">
+          <b>Special Attack:</b> {pokemon.stats[3].base_stat}
+        </p>
+        <p id="pokemon-special-defense">
+          <b>Special Defense:</b> {pokemon.stats[4].base_stat}
+        </p>
+
       </div>
     </section>
   );
